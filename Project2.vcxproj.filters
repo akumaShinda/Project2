@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StreamFusion\package.json" />
+    <None Include="StreamFusion\next.config.js" />
+    <None Include="StreamFusion\tsconfig.json" />
+    <None Include="StreamFusion\.env.example" />
+    <None Include="StreamFusion\.env.local" />
+    <None Include="StreamFusion\tailwind.config.js" />
+    <None Include="StreamFusion\postcss.config.js" />
+    <None Include="StreamFusion\lib\auth.ts" />
+    <None Include="StreamFusion\lib\providers.ts" />
+    <None Include="StreamFusion\lib\sync.ts" />
+    <None Include="StreamFusion\lib\store.ts" />
+    <None Include="StreamFusion\app\globals.css" />
+    <None Include="StreamFusion\app\layout.tsx" />
+    <None Include="StreamFusion\app\login\page.tsx" />
+    <None Include="StreamFusion\app\api\auth\login\route.ts" />
+    <None Include="StreamFusion\app\api\auth\verify\route.ts" />
+    <None Include="StreamFusion\app\api\search\route.ts" />
+    <None Include="StreamFusion\app\api\extract\route.ts" />
+    <None Include="StreamFusion\app\api\sync\history\route.ts" />
+    <None Include="StreamFusion\app\api\sync\pull\route.ts" />
+    <None Include="StreamFusion\app\api\sync\push\route.ts" />
+    <None Include="StreamFusion\app\api\sync\favorites\route.ts" />
+    <None Include="StreamFusion\app\api\sync\watchlist\route.ts" />
+    <None Include="StreamFusion\app\admin\page.tsx" />
+    <None Include="StreamFusion\app\dashboard\page.tsx" />
+    <None Include="StreamFusion\app\watch\[id]\page.tsx" />
+    <None Include="StreamFusion\app\page.tsx" />
+    <None Include="StreamFusion\Dockerfile" />
+    <None Include="StreamFusion\docker-compose.yml" />
+    <None Include="StreamFusion\wrangler.ts" />
+    <None Include="StreamFusion\wrangler.toml" />
+    <None Include="StreamFusion\README.md" />
+    <None Include="StreamFusion\ARCHITECTURE.md" />
+    <None Include="StreamFusion\API.md" />
+    <None Include="StreamFusion\DEPLOYMENT.md" />
+    <None Include="StreamFusion\.gitignore" />
+    <None Include="StreamFusion\.eslintignore" />
+    <None Include="StreamFusion\.eslintrc.json" />
+    <None Include="StreamFusion\app\error.tsx" />
+    <None Include="StreamFusion\app\not-found.tsx" />
+    <None Include="StreamFusion\app\admin\users\create\page.tsx" />
+    <None Include="StreamFusion\app\api\admin\users\create\route.ts" />
+    <None Include="StreamFusion\app\admin\users\[id]\page.tsx" />
+    <None Include="StreamFusion\app\api\admin\users\[id]\route.ts" />
+    <None Include="StreamFusion\app\admin\layout.tsx" />
+    <None Include="StreamFusion\app\dashboard\layout.tsx" />
+    <None Include="StreamFusion\app\watch\layout.tsx" />
+    <None Include="StreamFusion\QUICKSTART.md" />
+    <None Include="StreamFusion\lib\utils.ts" />
+    <None Include="StreamFusion\lib\api-client.ts" />
+    <None Include="StreamFusion\lib\storage.ts" />
+    <None Include="StreamFusion\lib\logger.ts" />
+    <None Include="StreamFusion\lib\components.tsx" />
+    <None Include="StreamFusion\PROJECT_INDEX.md" />
+    <None Include="StreamFusion\SETUP_GUIDE.md" />
+    <None Include="StreamFusion\FINAL_SUMMARY.md" />
+    <None Include="StreamFusion\START_HERE.md" />
+    <None Include="StreamFusion\VISUAL_OVERVIEW.md" />
+    <None Include="StreamFusion\COMPLETE_CHECKLIST.md" />
+    <None Include="StreamFusion\DOCUMENTATION_INDEX.md" />
+    <None Include="StreamFusion\PROJECT_COMPLETE.md" />
+    <None Include="StreamFusion\README_FIRST.md" />
+    <None Include="StreamFusion\QUICK_REFERENCE.md" />
+    <None Include="StreamFusion\DUAL_LINK_GUIDE.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+name = "streamfusion-worker"
+main = "wrangler.ts"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "streamfusion-worker-prod"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "streamfusion"
+database_id = "your_database_id"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "your_kv_id"
+preview_id = "your_preview_kv_id"
+
+[triggers]
+crons = ["0 */6 * * *"]
