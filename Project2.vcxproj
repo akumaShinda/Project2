@@ -155,10 +155,13 @@
     <None Include="StreamFusion\app\watch\layout.tsx" />
     <None Include="StreamFusion\app\watch\[id]\page.tsx" />
     <None Include="StreamFusion\ARCHITECTURE.md" />
+    <None Include="StreamFusion\BATCH_FILES_CREATED.md" />
+    <None Include="StreamFusion\BATCH_FILES_GUIDE.md" />
     <None Include="StreamFusion\COMPLETE_CHECKLIST.md" />
     <None Include="StreamFusion\DEPLOYMENT.md" />
     <None Include="StreamFusion\docker-compose.yml" />
     <None Include="StreamFusion\Dockerfile" />
+    <None Include="StreamFusion\DOCKER_FIX.md" />
     <None Include="StreamFusion\DOCUMENTATION_INDEX.md" />
     <None Include="StreamFusion\DUAL_LINK_GUIDE.md" />
     <None Include="StreamFusion\FINAL_SUMMARY.md" />
@@ -172,6 +175,7 @@
     <None Include="StreamFusion\lib\sync.ts" />
     <None Include="StreamFusion\lib\utils.ts" />
     <None Include="StreamFusion\next.config.js" />
+    <None Include="StreamFusion\ONE_CLICK_START.md" />
     <None Include="StreamFusion\package.json" />
     <None Include="StreamFusion\postcss.config.js" />
     <None Include="StreamFusion\PROJECT_COMPLETE.md" />
@@ -180,6 +184,12 @@
     <None Include="StreamFusion\QUICK_REFERENCE.md" />
     <None Include="StreamFusion\README.md" />
     <None Include="StreamFusion\README_FIRST.md" />
+    <None Include="StreamFusion\run-clean.bat" />
+    <None Include="StreamFusion\run-logs.bat" />
+    <None Include="StreamFusion\run-restart.bat" />
+    <None Include="StreamFusion\run-status.bat" />
+    <None Include="StreamFusion\run-stop.bat" />
+    <None Include="StreamFusion\run.bat" />
     <None Include="StreamFusion\SETUP_GUIDE.md" />
     <None Include="StreamFusion\START_HERE.md" />
     <None Include="StreamFusion\tailwind.config.js" />

@@ -79,5 +79,27 @@
     <None Include="StreamFusion\README_FIRST.md" />
     <None Include="StreamFusion\QUICK_REFERENCE.md" />
     <None Include="StreamFusion\DUAL_LINK_GUIDE.md" />
+    <None Include="StreamFusion\DOCKER_FIX.md" />
+    <None Include="StreamFusion\run.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\run-stop.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\run-restart.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\run-logs.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\run-status.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\run-clean.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="StreamFusion\BATCH_FILES_GUIDE.md" />
+    <None Include="StreamFusion\ONE_CLICK_START.md" />
+    <None Include="StreamFusion\BATCH_FILES_CREATED.md" />
   </ItemGroup>
 </Project>
