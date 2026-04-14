@@ -171,7 +171,7 @@ export default function WatchPage() {
                   src={selectedLink.url}
                   className="w-full h-full"
                   allowFullScreen
-                  sandbox="allow-scripts allow-presentation allow-downloads"
+                  sandbox="allow-scripts allow-presentation"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   title={content.title}
