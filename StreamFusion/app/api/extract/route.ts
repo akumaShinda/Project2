@@ -1,4 +1,5 @@
 import { providerRegistry } from '@/lib/providers';
+import { sanitizeStreamLinks } from '@/lib/stream-safety';
 
 export async function GET(request: Request) {
   try {
@@ -22,11 +23,22 @@ export async function GET(request: Request) {
       );
     }
 
+    const mergedLinks = sanitizeStreamLinks(results.flatMap((result) => result.links));
+    const primaryProvider = results[0];
+    const providerNames = results.map((result) => result.provider);
+    const primary = {
+      ...primaryProvider,
+      links: mergedLinks,
+      provider: providerNames.join(', '),
+      description: primaryProvider.description,
+    };
+
     return Response.json({
       contentId,
+      providerNames,
       providers: results,
       totalProviders: results.length,
-      primary: results[0],
+      primary,
       fallbacks: results.slice(1),
     });
   } catch (error) {

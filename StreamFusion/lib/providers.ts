@@ -1,3 +1,5 @@
+import { sanitizeStreamLinks } from '@/lib/stream-safety';
+
 // Provider registry with 8 extraction modules
 // Implements failover logic for multi-server support
 
@@ -357,7 +359,13 @@ export class ProviderRegistry {
     for (const { instance } of this.providers.sort((a, b) => a.priority - b.priority)) {
       const result = await instance.extract(contentId, query);
       if (result) {
-        return result;
+        const safeLinks = sanitizeStreamLinks(result.links);
+        if (safeLinks.length > 0) {
+          return {
+            ...result,
+            links: safeLinks,
+          };
+        }
       }
     }
 
@@ -373,7 +381,13 @@ export class ProviderRegistry {
     for (const { instance } of this.providers) {
       const result = await instance.extract(contentId, query);
       if (result) {
-        results.push(result);
+        const safeLinks = sanitizeStreamLinks(result.links);
+        if (safeLinks.length > 0) {
+          results.push({
+            ...result,
+            links: safeLinks,
+          });
+        }
       }
     }
 

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 import { useHistoryStore } from '@/lib/store';
 import { SyncService } from '@/lib/sync';
+import { sanitizeStreamLinks } from '@/lib/stream-safety';
 
 interface StreamLink {
   url: string;
@@ -57,8 +58,18 @@ export default function WatchPage() {
         }
 
         const data = await response.json();
-        setContent(data.primary);
-        setSelectedLink(data.primary.links[0]);
+        const safeLinks = sanitizeStreamLinks(data.primary.links || []);
+        if (safeLinks.length === 0) {
+          toast.error('No safe streams available');
+          router.push('/dashboard');
+          return;
+        }
+
+        setContent({
+          ...data.primary,
+          links: safeLinks,
+        });
+        setSelectedLink(safeLinks[0]);
         setIsFavorite(favorites.includes(contentId));
       } catch (error) {
         toast.error('Failed to load content');
@@ -160,6 +171,9 @@ export default function WatchPage() {
                   src={selectedLink.url}
                   className="w-full h-full"
                   allowFullScreen
+                  sandbox="allow-scripts allow-presentation"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   title={content.title}
                 ></iframe>
               ) : (
