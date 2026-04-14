@@ -29,7 +29,7 @@ export async function GET(request: Request) {
       ...primaryProvider,
       links: mergedLinks,
       provider: results.map((result) => result.provider).join(', '),
-      description: 'Combined streams with ad/pop-up filtering and provider failover',
+      description: results.map((result) => result.description).join(' | '),
     };
 
     return Response.json({
