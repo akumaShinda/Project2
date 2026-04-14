@@ -172,7 +172,7 @@ export default function WatchPage() {
                   className="w-full h-full"
                   allowFullScreen
                   sandbox="allow-scripts allow-presentation allow-downloads"
-                  referrerPolicy="no-referrer"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   title={content.title}
                 ></iframe>

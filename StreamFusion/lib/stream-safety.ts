@@ -19,6 +19,7 @@ const BLOCKED_HOST_KEYWORDS = [
 
 const BLOCKED_PATH_KEYWORDS = ['popup', 'popunder', 'banner', '/ads/', 'redirect'];
 const BLOCKED_QUERY_KEYS = ['ad', 'ads', 'popup', 'pop', 'track', 'tracker', 'redirect'];
+const DEDUPE_SEPARATOR = '\u001F';
 
 function normalizeStreamUrl(rawUrl: string): string | null {
   const trimmed = rawUrl.trim();
@@ -70,7 +71,7 @@ export function sanitizeStreamLinks<T extends StreamLinkLike>(links: T[]): T[] {
     if (!normalizedUrl) continue;
     if (isBlockedStreamUrl(normalizedUrl)) continue;
 
-    const dedupeKey = `${normalizedUrl}\u001F${link.quality}\u001F${link.type}`;
+    const dedupeKey = `${normalizedUrl}${DEDUPE_SEPARATOR}${link.quality}${DEDUPE_SEPARATOR}${link.type}`;
     if (unique.has(dedupeKey)) continue;
     unique.add(dedupeKey);
 
