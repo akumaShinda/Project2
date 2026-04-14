@@ -19,6 +19,7 @@ const BLOCKED_HOST_KEYWORDS = [
 
 const BLOCKED_PATH_KEYWORDS = ['popup', 'popunder', 'banner', '/ads/', 'redirect'];
 const BLOCKED_QUERY_KEYS = ['ad', 'ads', 'popup', 'pop', 'track', 'tracker', 'redirect'];
+// Unit Separator minimizes collision risk with URL/quality/type values during key composition.
 const DEDUPE_SEPARATOR = '\u001F';
 
 function normalizeStreamUrl(rawUrl: string): string | null {

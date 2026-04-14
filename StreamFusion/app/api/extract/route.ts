@@ -25,15 +25,17 @@ export async function GET(request: Request) {
 
     const mergedLinks = sanitizeStreamLinks(results.flatMap((result) => result.links));
     const primaryProvider = results[0];
+    const providerNames = results.map((result) => result.provider);
     const primary = {
       ...primaryProvider,
       links: mergedLinks,
-      provider: results.map((result) => result.provider).join(', '),
+      provider: providerNames.join(', '),
       description: primaryProvider.description,
     };
 
     return Response.json({
       contentId,
+      providerNames,
       providers: results,
       totalProviders: results.length,
       primary,
