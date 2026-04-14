@@ -29,7 +29,7 @@ export async function GET(request: Request) {
       ...primaryProvider,
       links: mergedLinks,
       provider: results.map((result) => result.provider).join(', '),
-      description: results.map((result) => result.description).join(' | '),
+      description: primaryProvider.description,
     };
 
     return Response.json({

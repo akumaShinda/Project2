@@ -70,11 +70,7 @@ export function sanitizeStreamLinks<T extends StreamLinkLike>(links: T[]): T[] {
     if (!normalizedUrl) continue;
     if (isBlockedStreamUrl(normalizedUrl)) continue;
 
-    const dedupeKey = JSON.stringify({
-      url: normalizedUrl,
-      quality: link.quality,
-      type: link.type,
-    });
+    const dedupeKey = `${normalizedUrl}\u001F${link.quality}\u001F${link.type}`;
     if (unique.has(dedupeKey)) continue;
     unique.add(dedupeKey);
 
